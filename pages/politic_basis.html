@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>politic_basis.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E6%94%BF%E6%B2%BB%E5%AD%A6%E3%81%AE%E5%9F%BA%E7%A4%8E-%E9%81%8E%E5%8E%BB%E5%95%8F">政治学の基礎　過去問</h1>
+<ul>
+<li><a href="#%E6%94%BF%E6%B2%BB%E5%AD%A6%E3%81%AE%E5%9F%BA%E7%A4%8E%E9%81%8E%E5%8E%BB%E5%95%8F">政治学の基礎　過去問</a>
+<ul>
+<li><a href="#2022%E5%B9%B4">2022年</a></li>
+<li><a href="#2021%E5%B9%B4">2021年</a></li>
+<li><a href="#2020%E5%B9%B4%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E8%A9%A6%E9%A8%93">2020年（オンライン試験）</a></li>
+<li><a href="#2019%E5%B9%B4">2019年</a></li>
+<li><a href="#2018%E5%B9%B4">2018年</a></li>
+<li><a href="#2017%E5%B9%B4">2017年</a></li>
+<li><a href="#2016%E5%B9%B4">2016年</a></li>
+<li><a href="#2015%E5%B9%B4">2015年</a></li>
+<li><a href="#2014%E5%B9%B4">2014年</a></li>
+<li><a href="#2013%E5%B9%B4">2013年</a></li>
+<li><a href="#2012%E5%B9%B4">2012年</a></li>
+<li><a href="#2011%E5%B9%B4">2011年</a></li>
+<li><a href="#2010%E5%B9%B4">2010年</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="2022%E5%B9%B4">2022年</h2>
+<ol>
+<li>2022年7月10日に実施された参議院選挙の投率率52.05%であった。前回2019年の参議院選挙に比べると投票率は3.25パーセントポイント上昇したものの、高い投票率とは言いがたい結果である。ここでは、まずライカーとオーデシュックの方程式（合理的選択モデル）について説明したうえで、なぜ今回の参議院選挙の投票率はそれほど高くならなかったのかを、この方程式を用いて説明しなさい。</li>
+<li>政党にはどのような機能があるのか、 説明しなさい。また日本の政党は、ここで挙げられた機能を、どの程度果たしていると考えられるか。貴君の考えを論じなさい。</li>
+</ol>
+<h2 id="2021%E5%B9%B4">2021年</h2>
+<p>以下の2問すべてに解答しなさい。</p>
+<ol>
+<li>伊東光利が提示した「（民間）大企業労使連合」という概念について、下記の語句をすべて用いて説明しなさい。<br>
+　　「団体系列論」「政策受益団体」「小さな政府」「官公労」</li>
+<li>「官僚優位論」と「政党優位論」の内容を説明しなさい。また、どちらの主張が、現在の日本の政官関係をよりよく説明できるであろうか。①「官僚優位論である」、②「政党優位論である」、③どちらでもない、のいずれの立場をとるのかを明記し、具体的な根拠を示しながら論じなさい。</li>
+</ol>
+<h2 id="2020%E5%B9%B4%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E8%A9%A6%E9%A8%93">2020年（オンライン試験）</h2>
+<p>以下の2 問すべてに解答しなさい。</p>
+<ol>
+<li>第 2 次以降の安倍晋三内閣は、首相官邸主導で政策決定を行っており、1990 年以前の内閣とは大きく異なると言われている。この違いをもたらした制度的原因を「拒否点」という概念を用いて説明しなさい。</li>
+<li>日本の衆議院、参議院、都道府県議会、市町村議会のそれぞれについて、貴君が選挙制度を自由に決めることができるとするならば、それぞれどのような選挙制度にすると、最も望ましいと貴君が考える結果を生み出すことになると考えるか。それぞれの選挙制度と、それを選んだ理由、それにより期待される成果について論じなさい。</li>
+</ol>
+<h2 id="2019%E5%B9%B4">2019年</h2>
+<p>以下の2問すべてに解答しなさい。</p>
+<ol>
+<li>集合行為問題とは、いかなる問題なのかを説明しなさい。また、集合行為問題を克服する方法について、具体例を挙げて説明しなさい。（第３章）</li>
+<li>.
+<ol>
+<li>多数決民主主義とコンセンサス型民主主義について、それぞれの特徴を説明しなさい。（第５章）</li>
+<li>1990 年代の日本の政治改革・行政改革は、多数決民主主義の方向を目指した改革であったと言われることが多い。それでは、その方向での改革は十分な成果を挙げたと言えるであろうか。貴君の考えを論じなさい。</li>
+</ol>
+</li>
+</ol>
+<h2 id="2018%E5%B9%B4">2018年</h2>
+<p>以下の2問すべてに解答しなさい。</p>
+<ol>
+<li>「政党支持層」と「積極的無党派層」、「消極的無党派層」それぞれの違いについて説明しなさい。</li>
+<li>衆議院の選挙制度を中選挙区制から小選挙区中心の選挙制度に変更することで、どのような効果が期待されたのかを説明しなさい。また現時点で、その効 果は期待通りに実現されていると言えるのか、貴君の考えを論じなさい。</li>
+</ol>
+<h2 id="2017%E5%B9%B4">2017年</h2>
+<p>以下の2問すべてに解答しなさい。</p>
+<ol>
+<li>有権者の投票行動を説明する代表的な理論モデルである、コロンビアモデル（社会学的モデル）、ミシガンモデル（心理学的モデル）、業績評価モデル（経済学的モデル）について説明しなさい（それぞれに対して行われて批判については、説明しなくてよい）。（第２章）</li>
+<li>「国会機能論」について、以下の語句を用いて説明しなさい。また第 193 回通常国会（ 2017 年 1 月 20日～ 6 月 18 日）についても、「国会機能論」は適用可能だと考えるか。貴君の考えを述べなさい。<br>
+　　「委員会制」、「二院制」、「会期制」、「全会一致慣行」　（第６章）</li>
+</ol>
+<h2 id="2016%E5%B9%B4">2016年</h2>
+<p>以下の2問すべてに解答しなさい。</p>
+<ol>
+<li>W ．ライカ―と P ．オーデシュックによる投票行動のモデルについて説明しなさい。また、このモデルを踏まえれば、どのような場合に投票率が上がる（もしくは下がる）と考えられるか。説明しなさい。（第２章）</li>
+<li>日本における政党（政治家）と官僚の影響力関係については、「官僚優位論」と「政党優位論」という2つの有力な説がある。この両説の内容を説明しなさい。また、この両説に対する貴君自身の見解を論じなさい。その際、①「官僚優位論」を支持する、②「政党優位論を支持する、③別の主張を持っている、いずれの立場をとるのかを明記し、具体的な根拠を示しながら議論を進めなさい。（第７章）</li>
+</ol>
+<h2 id="2015%E5%B9%B4">2015年</h2>
+<p>以下の2問すべてに解答しなさい。</p>
+<ol>
+<li>日本における投票行動について、社会学モデル、心理学モデル、経済業績モデルにより、それぞれどのような説明がなされてきたのか。以下の語句をすべて用いて説明しなさい。<br>
+　　「文化政治」、「自前意識」、「政党支持態度」、「政党支持の幅」、「拒否政党」、「政治腐敗」、「個人投票」 （第２章）</li>
+<li>「市場の失敗」にはどのようなケースがあるか。具体例を挙げつつ、説明しなさい。また現代の日本においては「市場の失敗」と「政府の失敗」のどちらが、より重大な問題だと貴君は考えるか。具体的な根拠を挙げて、貴君の考えを論じなさい。 （第７章）</li>
+</ol>
+<h2 id="2014%E5%B9%B4">2014年</h2>
+<ol>
+<li>先進諸国の政府は、程度の差はあれ「再分配」政策を実施し、「公平」の実現に努めている。このような政策は、どのようにして正当化されるのか、説明しなさい。また、それぞれの説について、貴君はどのように考えるのか、説明しなさい。</li>
+<li>衆議院の選挙制度を中選挙区制から小選挙区制中心の選挙制度に変更することで、どのような効果が期待されたのかを説明しなさい。また、現時点で、その効果は期待通りに実現されていると言えるのか、貴君の考えを論じなさい。</li>
+</ol>
+<h2 id="2013%E5%B9%B4">2013年</h2>
+<p>以下の2問すべてに解答しなさい。</p>
+<ol>
+<li>「政府の失敗」とは何か。具体例を挙げて説明しなさい。また、その原因およびその解決策についても論じなさい。 （第７章）</li>
+<li>以下の問いに解答しなさい。
+<ol>
+<li>衆議院においては選挙制度改革以降、二大政党化が進んできた。ところが、 2012年総選挙では民主党が分裂し、第3極と称される政党の台頭が見られた。このような現象がなぜ生じたのかを、衆議院の選挙制度の特徴から説明しなさい。なお解答の際には、二大政党化を促進した要因と、 2012 年総選挙で見られたような小党乱立を促進した要因のそれぞれを挙げて、論述しなさい。</li>
+<li>日本の衆議院選挙においては、どのような選挙制度が望ましいと貴君は考えますか。貴君の考えをその論拠を示して説明しなさい。</li>
+</ol>
+</li>
+</ol>
+<h2 id="2012%E5%B9%B4">2012年</h2>
+<p>以下の 2問すべてに解答しなさい。</p>
+<ol>
+<li>有権者の投票行動を説明する代表的な理論モデルである、コロンビアモデル（社会学的モデル）、ミシガンモデル（心理学的モデル）、業績評価モデル（経済学的モデル）について、説明しなさい。また、各モデルに対してどのような批判がなされたのかについても説明しなさい。（第２章）</li>
+<li>小泉首相が登場するまで、一部の例外を除き、日本の首相のリーダーシップは弱いと言われてきた。なぜ首相のリーダーシップは弱かったのか。下記の語句をすべて用いて、その理由を説明しなさい。また現在において、日本の首相のリーダーシップをさらに強化するには、どのような方策をとればよいと考えますか。あなた自身の見解を論じなさい。 （第５章） <br>
+　　 「中選挙区制」、「派閥」、「個人後援会」、「政治資金」、「閣僚任免権」、「官僚制」、「政務調査会」、「族議員」</li>
+</ol>
+<h2 id="2011%E5%B9%B4">2011年</h2>
+<ol>
+<li>以下の語句の意味をそれぞれ数行程度で説明しなさい。
+<ol>
+<li>ミシガン・モデル （第２章）</li>
+<li>SNTV （第４章）</li>
+<li>「コミュニケーションの2段階の流れ」仮説（第８章）</li>
+</ol>
+</li>
+<li>日本では、同じ議院内閣制の国であるイギリスと比べて、内閣提出法案の成立率が低い傾向にある。それはなぜだと考えられるか。以下の語句を用いて説明しなさい。<br>
+　　「委員会制」「二院制」「会期制」「全会一致慣行」 （第６章）</li>
+<li>「市場の失敗」にはどのようなケースがあるか。具体例を挙げつつ、説明しなさい。また現代の日本においては、「市場の失敗」と「政府の失敗」のどちらが、より重大な問題だと貴君は考えるか。具体的な根拠を挙げて、貴君の考えを論じなさい。 （第７章）</li>
+</ol>
+<h2 id="2010%E5%B9%B4">2010年</h2>
+<ol>
+<li>以下の語句の意味を、それぞれ具体例を挙げながら数行程度で説明しなさい。
+<ol>
+<li>（１）記述的推論と因果的推論</li>
+<li>（２）アリーナ型議会 （第６章）</li>
+<li>（３）「沈黙の螺旋」理論 （第８章）</li>
+</ol>
+</li>
+<li>小泉純一郎が 、それ以前と比べて強いリーダーシップを発揮した要因とし て、 1990 年代の行政改革・政治改革が挙げられることが多い。なぜ、 1990年代の行政改革・政治改革が、首相のリーダーシップを高める方向に作用したのか。以下の語句を用いて説明しなさい。 （第５章）<br>
+　　「中選挙区制」、「個人後援会」、「派閥」、「小選挙区比例代表並立制」、「公認権」、「政治資金規正法」、「経済財政諮問会議」、「内閣官房の強化」</li>
+<li>日本における政党（政治家）と官僚の影響力関係については、「官僚優位論」と「政党優位論」という 2 つの有力な説がある。この両説の内容を説明しなさい。また、この両説に対する貴君自身の見解を論じなさい。その際、「官僚優位論」を支持する、「政党優位論」を支持する、別の主張を持っている、のいずれの立場をとるのか明記し、具体的な根拠を示しながら議論を進めなさい。（第７章）</li>
+</ol>
+
+</body>
+</html>
