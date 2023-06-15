@@ -10,4 +10,4 @@
 |-|-|:-:|-|-|-|
 |法学の基礎|坂口一成ほか|2010-2022|[テキスト](/pages/year1_freshman/law_basis.md)|[HTML](/pages/year1_freshman/law_basis.html)|[PDFファイル](/kakomon/year1_freshman/law_basis_2016-2022.pdf)|
 |政治学の基礎|上川龍之進|2010-2022|[テキスト](/pages/year1_freshman/politic_basis.md)|[HTML](/pages/year1_freshman/politic_basis.html)|[PDFファイル](/kakomon/year1_freshman/politic_basis_2010-2022.pdf)|
-|ミクロ経済入門|室岡健志||[テキスト](/pages/year1_freshman/micro_primer.md)||
+|ミクロ経済入門|室岡健志|2017-2021|[テキスト](/pages/year1_freshman/micro_primer.md)|[HTML](/pages/year1_freshman/micro_primer.html) |
