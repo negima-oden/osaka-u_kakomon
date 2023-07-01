@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>constitution1.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E6%86%B2%E6%B3%95%EF%BC%91">憲法１</h1>
+<ul>
+<li><a href="#2022%E5%B9%B4%E5%BA%A6">2022年度</a></li>
+<li><a href="#2018%E5%B9%B4%E5%BA%A6">2018年度</a></li>
+<li><a href="#2012%E5%B9%B4%E5%BA%A6">2012年度</a></li>
+<li><a href="#2011%E5%B9%B4%E5%BA%A6">2011年度</a></li>
+<li><a href="#2008%E5%B9%B4%E5%BA%A6">2008年度</a></li>
+<li><a href="#%E6%8B%85%E5%BD%93%E6%95%99%E5%AE%98%E4%B8%80%E8%A6%A7">担当教官一覧</a></li>
+</ul>
+<h2 id="2022%E5%B9%B4%E5%BA%A6">2022年度</h2>
+<p>各単元の終わりに課題（8回）を提供した他，二度の特別課題を出した。ここで示すのは，二回目の特別課題である。<br>
+　「司法権」についての諸学説を，「権力分立」，「事件・訴訟性」，「法律上の訴訟」，「その他法律において特に定める権限」，「民衆訴訟」という概念に触れつつ，簡潔に対比・分類せよ。</p>
+<h2 id="2018%E5%B9%B4%E5%BA%A6">2018年度</h2>
+<ol>
+<li>「権力分立」とその近代立憲主義から現代立憲主義への展開について述べよ。その際，行政府内における内閣から独立した行政機関の意義をこの観点から位置づけるとともに，それについて生じている近年の問題についても説明せよ。</li>
+<li>委任命令が，基準無く，あるいは，委任の範囲を逸脱して制定されることについて，それはいかなる問題を招来するか。それに対する近年の裁判所の統制強化とその論拠とについて，併せて説明せよ。</li>
+</ol>
+<h2 id="2012%E5%B9%B4%E5%BA%A6">2012年度</h2>
+<p>立憲君主制から立憲民主制への転換という観点に注意し、日本国憲法下における次の権限について論ぜよ。</p>
+<ol>
+<li>国家行政組織に関する法規範の定立権限</li>
+<li>行政権</li>
+</ol>
+<h2 id="2011%E5%B9%B4%E5%BA%A6">2011年度</h2>
+<p>日本国憲法の規定と、法治主義、国民主権の観点から、下記の法令について論評しなさい。</p>
+<p><u>自衛隊法</u></p>
+<blockquote>
+<p>第百条の五<br>
+第一項<br>
+防衛大臣は、国の機関から依頼があった場合には、自衛隊の任務遂行に支障を生じない限度において、航空機による国賓、内閣総理大臣その他政令で定める者（次項において「国賓等」という。）の輸送を行うことができる。</p>
+</blockquote>
+<p><u>平成３・１・29・政令8号（廃止　平成３・４・23・政令146号）</u><br>
+<u>湾岸危機に伴う避難民の輸送に関する暫定措置に関する政令</u></p>
+<blockquote>
+<p>内閣は、自衛隊法（昭和29年法律第165号）第100条の５第１項の規定に基づき、この政令を制定する。<br>
+　自衛隊法第100条の５第１項に規定する政令で定める者は、当分の間、自衛隊法施行令（昭和29年政令第179号）第126条の16に規定する者のほか、弯岸危機（イラクのクウェイトに対する侵攻及び占領以降国際連合安全保障理事会決議第678号に基づく国際連合加盟国のイラクに対ずる武力行使に至る一連の事態及びこれに引き続く重大緊急事態をいう。）に伴い生じたイラク、クウェイト及びこれらの国の周辺の国からの避難民として、避難民についての輸送その他の支援をその活動の一部とする国際機関から我が国に対しその本国への輸送その他の輸送の要請があった者とする。</p>
+</blockquote>
+<p><u>国家公務員法</u></p>
+<blockquote>
+<p>第百二条
+第一項
+　職員は、政党又は政治的目的のために、寄附金その他の利益を求め、若しくは受領し、又は何らの方法を以てするを問わず、これらの行為に関与し、あるいは選挙権の行使を除く外、人事院規則で定める政治的行為をしてはならない。</p>
+</blockquote>
+<p><u>人事院規則一四―七</u></p>
+<blockquote>
+<p>第五項
+　法及び規則中政治的目的とは、次に掲げるものをいう。政治的目的をもつてなされる行為であっても、第六項に定める政治的行為に含まれない限り、法第百二条第一項の規定に違反するものではない。
+　ー　規則一四―五に定める公選による公職の選挙において、特定の候補者を支持し又はこれに反対すること。
+　二　最高裁判所の裁判官の任命に関する国民審査に際し、特定の裁判官を支持し又はこれに反対すること。
+　三　特定の政党その他の政治的団体を支持し又はこれに反対すること。
+　四　特定の内閣を支持し又はこれに反対すること。
+　五　政治の方向に影響を与える意図で特定の政策を主張し又はこれに反対すること。
+　六～八　略</p>
+</blockquote>
+<p>第六項</p>
+<blockquote>
+<p>法第百二条第一項の規定する政治的行為とは、次に掲げるものをいう。
+　ー　政治的目的のために職名、職権又はその他の公私の影響力を利用すること。
+　二　政治的目的のために寄附金その他の利益を提供し又は提供せずその他政治的目的をもつなんらかの行為をなし又はなさないことに対する代償又は報復として、任用、職務、給与その他職員の地位に関してなんらかの利益を得若しくは得ようと企て又は得させようとすることあるいは不利益を与え、与えようと企て又は与えようとおびやかすこと。
+　三　政治的目的をもって、賦課金、寄附金、会費又はその他の金品を求め若しくは受領し又はなんらの方法をもつてするを問わずこれらの行為に関与すること。
+　四　政治的目的をもつて、前号に定める金品を国家公務員に与え又は支払うこと。
+　五　政党その他の政治的団体の結成を企画し、結成に参与し若しくはこれらの行為を援助し又はそれらの団体の役員、政治的穎問その他これらと同様な役割をもつ構成員となること。
+　六　特定の政党その他の政治的団体の構成員となるように又はならないように勧誘運動をすること。
+　七　政党その他の政治的団体の機関紙たる新聞その他の刊行物を発行し、編集し、配布し又はこれらの行為を援助すること。
+　八　政治的目的をもつて、第五項第一号に定める選挙、同項第二号に定める国民審査の投票又は同項第八号に定める解散若しくは解職の投票において、投票するように又はしないように勧誘運動をすること。
+　九　政治的目的のために署名運動を企画し、主宰し又は指導しその他これに積極的に参与すること。
+　十　政治的目的をもつて、多数の人の行進その他の示威運動を企画し、組織し若しくは指導し又はこれらの行為を援助すること
+　十一～十七略</p>
+</blockquote>
+<h2 id="2008%E5%B9%B4%E5%BA%A6">2008年度</h2>
+<ol>
+<li>国民主権原理について、 1970年代以降の学説の展開もふまえ、現在における同原理の意義を、特に正統性に着目して、述べよ。</li>
+<li>日本国憲法下の「行政権」の意義について、近年の学説の対立をふまえ、説明せよ。</li>
+</ol>
+<h2 id="%E6%8B%85%E5%BD%93%E6%95%99%E5%AE%98%E4%B8%80%E8%A6%A7">担当教官一覧</h2>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th>教官名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023</td>
+<td>村西良太</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>高田篤/髙井裕之</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>村西良太</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>髙井裕之</td>
+</tr>
+<tr>
+<td>2009</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2008</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>高田篤</td>
+</tr>
+<tr>
+<td>2006</td>
+<td>高田篤</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
