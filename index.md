@@ -18,4 +18,4 @@
 
 |科目名|担当教官|年度|Markdown|HTML|ファイル（サボりがち）|
 |-|-|:-:|-|-|-|
-|法の世界（情報通信に関する法と政策）|福田雅樹|[テキスト](/pages/liberalarts/world_of_law_IT.md)|||
+|法の世界（情報通信に関する法と政策）|福田雅樹|2021,2023中|[テキスト](/pages/liberalarts/world_of_law_IT.md)|||
