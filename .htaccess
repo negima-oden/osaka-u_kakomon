@@ -1,4 +1,4 @@
-AuthUserFile /osaka-u_kakomon/.htpasswd
+AuthUserFile /.htpasswd
 AuthGroupFile /dev/null
 AuthName "Input ID and Password."
 AuthType Basic
