@@ -4,6 +4,7 @@
 授業内容についての概説を気が向いたら記している。
 
 - [1回生充当科目](#1回生充当科目)
+- [2回生充当科目](#2回生充当科目)
 - [一般教養科目](#一般教養科目)
 
 ## 1回生充当科目
@@ -15,6 +16,11 @@
 |[ミクロ経済入門](pages/year1_freshman/micro_primer.html)|室岡健志|2017-2021|
 |[憲法１](pages/year1_freshman/constitution1.html)|村西良太／高田篤|2008,2011-12,2018,2022-2023|
 |[民法１](pages/year1_freshman/civil_law1.html)|武田直大|2024|
+
+## 2回生充当科目
+
+|科目名|担当教官|年度|
+|:-|-|:-:|
 |[憲法２](pages/year2_sophomore/constitution2.html)||2024|
 |[民法２](pages/year2_sophomore/civil_law2.html)||2024|
 |[刑法１](pages/year2_sophomore/criminal_law1.html)||2024|
