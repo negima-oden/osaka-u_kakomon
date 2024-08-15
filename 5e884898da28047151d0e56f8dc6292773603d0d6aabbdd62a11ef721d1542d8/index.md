@@ -15,7 +15,7 @@
 |[政治学の基礎](pages/year1_freshman/politic_basis.html)|上川龍之進|2010-2023|
 |[ミクロ経済入門](pages/year1_freshman/micro_primer.html)|室岡健志|2017-2021|
 |[憲法１](pages/year1_freshman/constitution1.html)|村西良太／高田篤|2008,2011-12,2018,2022-2023|
-|[民法１](pages/year1_freshman/civil_law1.html)|武田直大|2024|
+|[民法１](pages/year1_freshman/civil_law1.html)|武田直大|2023|
 
 ## 2回生充当科目
 
