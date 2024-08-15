@@ -1,4 +1,4 @@
-AuthUserFile /home/.htpasswd
+AuthUserFile /https://negima-oden.github.io/osaka-u_kakomon/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Input ID and Password."
 AuthType Basic
