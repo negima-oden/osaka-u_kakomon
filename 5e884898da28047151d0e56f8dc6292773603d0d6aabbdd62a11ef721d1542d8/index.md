@@ -14,6 +14,9 @@
 |政治学の基礎|上川龍之進|2010-2023|[テキスト](/pages/year1_freshman/politic_basis.md)|[HTML](/pages/year1_freshman/politic_basis.html)|[PDFファイル](/kakomon/year1_freshman/politic_basis_2010-2022.pdf)|
 |ミクロ経済入門|室岡健志|2017-2021|[テキスト](/pages/year1_freshman/micro_primer.md)|[HTML](/pages/year1_freshman/micro_primer.html) |
 |憲法１|村西良太／高田篤|2008,2011-12,2018,2022-2023|[テキスト](/pages/year1_freshman/constitution1.md) |[HTML](/pages/year1_freshman/constitution1.html)|
+|民法１|武田直大|2024|[テキスト](/pages/year1_freshman/civil_law1.md.) |[HTML](/pages/year1_freshman/)|
+|憲法２||2024|[テキスト](/pages/year1_freshman/constitution2.md) |[HTML](/pages/year1_freshman/constitution2.html)|
+|民法２||2024|[テキスト](/pages/year1_freshman/civil_law2.md.) |[HTML](/pages/year1_freshman/)|
 
 ## 一般教養科目
 
