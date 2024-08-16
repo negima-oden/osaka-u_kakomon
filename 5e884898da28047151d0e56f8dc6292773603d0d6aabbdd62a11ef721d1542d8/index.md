@@ -24,7 +24,9 @@
 |[憲法２](pages/year2_sophomore/constitution2.html)||2024|
 |[民法２](pages/year2_sophomore/civil_law2.html)|中村瑞穂|2024|
 |[刑法１](pages/year2_sophomore/criminal_law1.html)||2024|
+|[刑法２](pages/year2_sophomore/criminal_law2.html)|島岡まな|2019-22|
 |[行政法１](pages/year2_sophomore/admin_law1.html)|長谷川佳彦|2024|
+|[行政法２](pages/year2_sophomore/admin_law2.html)||2024|
 
 ## 一般教養科目
 
