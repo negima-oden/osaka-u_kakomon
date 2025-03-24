@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>constitution1_2023.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E6%86%B2%E6%B3%95%EF%BC%91-2023%E5%B9%B4%E5%BA%A6%E6%9D%91%E8%A5%BF%E8%89%AF%E5%A4%AA">憲法１　2023年度（村西良太）</h1>
+<h2 id="%E7%AC%AC1%E5%95%8F">【第1問】</h2>
+<p>次の会話を読んで、下記の【問1】～【問8】に答えなさい。</p>
+<p>学生A：今日の新聞に最新の世論調査結果が載っていました。現政権の支持率は下落の一途で、首相の解散戦略は練り直しを迫られているそうです。<br>
+学生B：解散戦略って何？<br>
+学生A：衆議院を解散して総選挙に打って出る、その絶妙なタイミングを首相は狙っていたけれど、すでに好機を逸してしまった、ということでしょう。<br>
+教授：そういう類型をよく耳にするけれど、そもそも衆議院の解散を決定するのは誰ですか？憲法上、それは首相の権限ですか？<br>
+学生B：いや、（①）の権限です。<br>
+学生A：それって結局、同じことではないですか？解散決定に反対する国務大臣がもし居たら、首相はその大臣を罷免して、閣議決定を押し通せば良いのだから。<br>
+教授：そうやって大臣罷免の決断を否定すべきだ、というのは、やはり懸念される学説や行政法もあります。ところで、衆議院解散の決定は（①）の権限だと憲法のどこに書いてありますか？<br>
+学生B：（②）です。<br>
+学生A：それは天皇の<u>③国事行為</u>を定めている条文でしょう。ということは、衆議院解散の決定は天皇の権限だ、という結論になりそうですね。<br>
+学生B：いや、そうではない。衆議院の解散を決定するのは、あくまで①の権限だ、と通説上の条文を解釈してきたはずです。<br>
+教授：通説の理解は、B君の言うとおりだね。だけど、この条文解釈には⑤看過できない難点がある、と指摘されることも珍しくないよ。<br>
+学生A：衆議院の解散について直接定める憲法の別の条文は、⑥ですよね。<br>
+教授：その通り。だけど、この条文は解散権の所在を正面から規定していない。それに加え、解散権の行使が濫用を避けるべきだ、という懸念も言われることがあるよ。<br>
+学生B：なるほど、憲法の条文に不備があるのですね。そう考えると、特定の条文に依拠するだけでなく、法体系の⑦を採用していることをもって①の自由な解散権を根拠づける学説も有力だと聞きました。<br>
+教授：制度説、と称される学説ですね。ただ、通説にせよ制度説にせよ、①の「自由な」解散権がただちに肯定されるとは見えません。<br>
+学生A：そうか、党利党略で解散の時機を自由に決められるわけではないのか。<br>
+学生B：「解散権の限界」という論点ですね。とりわけ、⑧限界を超えた解散が行われたとき、日本の裁判所はそのことをちゃんと審査してくれるのかなあ。</p>
+<p>【問1】（①）に適切な国家機関の名を答えなさい。</p>
+<p>【問2】（②）に適切な条文番号を答えなさい。</p>
+<p>【問3】傍線部③について、「国事行為」に関する下記ア～エの記述の中で、正しいものはどれか。1つ選んで、記号で答えなさい。</p>
+<p>ア. 国政に関する機能を天皇に付与しない限り、憲法で定められている国事行為以外の行為について、新たな国事行為として法律で定めることも許される。<br>
+イ. 国事行為のうち、その行為自体が名目的・儀礼的なものであっても、天皇は、自らの判断に基づき、内閣の助言と承認を拒むことは許されない。<br>
+ウ. 国事行為に関する内閣の「助言」と「承認」は、一体的に解されてはならず、「助言」と「承認」の各々につき別個の閣議決定が必要である。<br>
+エ. 憲法は、天皇の無答責を明文で規定していないので、内閣の助言と承認のもとで行われた天皇の国事行為であっても、内閣の責任のほかに天皇が責任を負うことがあり得る。</p>
+<p>【問4】傍線部④について、通説は衆議院解散に関する決定権の所在を、どのように説明してきたか。ここで問題となっている条文に即して、2～3行程度で簡潔に述べなさい。</p>
+<p>【問5】傍線部⑤について、通説の論理構造に認められる「難点」とは何か。2～3行程度で簡潔に述べなさい。</p>
+<p>【問6】（⑥）に適切な条文番号を答えなさい。</p>
+<p>【問7】（⑦）に適切な語を答えなさい。</p>
+<p>【問8】傍線部⑧について、下記ア～エの記述の中で、最高裁判例の判例に適合的な記述はどれか。1つ選んで、記号で答えなさい。</p>
+<p>ア. 衆議院の解散は、内閣の広範な裁量に委ねられるべき決定であるから、一見極めて明白に違憲無効であると認められない限り、司法審査の範囲外である。<br>
+イ. 衆議院の解散が違法であることを前提に国会議員の歳費の支払を請求する訴えは、法律上の争訟に当たらない。<br>
+ウ. 衆議院の解散に対する有効無効の判断は、たとえ法律上可能であっても裁判所の審査権の外にあり、主権者たる国民に対して政治責任を負う政府、国会等の政治部門に任され、最終的には国民の政治判断に委ねられている。<br>
+エ. 衆議院の解散は、国会議員の地位を任期満了前に剥奪する重大な行為であるから、その適否は常に司法審査の対象となる。</p>
+<h2 id="%E7%AC%AC2%E5%95%8F">第2問</h2>
+<p>運輸安全委員会を具体例として、いわゆる「独立行政委員会」の合憲性を論じなさい。解答にあたっては、下記「条文資料」に依拠しつつ、次の（1）～（3）の諸点に必ず言及すること。</p>
+<p>(1) 独立行政委員会とは、いかなる特質をもつ行政機関のことか。<br>
+(2) 独立行政委員会には、いかなる憲法上の疑義が提起されてきたか。<br>
+(3) 通説は、独立行政委員会の合憲性をどのように論証してきたか。</p>
+<p>【条文資料】<br>
+運輸安全委員会設置法（抄）<br>
+〔参照条文省略　法3乃至6、7Ⅰ、8Ⅰ、9Ⅰ、10Ⅱ、16、25Ⅰ及びⅣ、26Ⅰ並びに27Ⅰ乃至Ⅲまでが示されている。〕</p>
+
+</body>
+</html>
