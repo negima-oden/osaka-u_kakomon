@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName “sample”
-AuthUserFile .htpasswd
+AuthUserFile /path/.htpasswd
 require valid-user
