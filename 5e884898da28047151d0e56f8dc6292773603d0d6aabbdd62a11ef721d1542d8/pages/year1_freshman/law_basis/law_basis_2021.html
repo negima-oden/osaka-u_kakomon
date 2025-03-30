@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>law_basis_2021.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E6%B3%95%E5%AD%A6%E3%81%AE%E5%9F%BA%E7%A4%8E-2021%E5%B9%B4%E5%BA%A6%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E8%A9%A6%E9%A8%93%E5%9D%82%E5%8F%A3%E4%B8%80%E6%88%90%E4%B8%89%E9%98%AA%E4%BD%B3%E5%BC%98%E7%A6%8F%E4%BA%95%E5%BA%B7%E5%A4%AA">法学の基礎　2021年度（オンライン試験）（坂口一成，三阪佳弘，福井康太）</h1>
+<ul>
+<li><a href="#%E5%95%8F%E9%A1%8C">問題</a></li>
+<li><a href="#%E8%AC%9B%E8%A9%95%E5%95%8F%E9%A1%8C1">講評（問題1）</a>
+<ul>
+<li><a href="#1%E5%95%8F%E9%A1%8C%E5%89%B2%E6%84%9B">（1）問題（割愛）</a></li>
+<li><a href="#2%E5%87%BA%E9%A1%8C%E6%84%8F%E5%9B%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">（2）出題意図について</a></li>
+</ul>
+</li>
+<li><a href="#%E8%AC%9B%E8%A9%95%E5%95%8F%E9%A1%8C2">講評（問題2）</a>
+<ul>
+<li><a href="#1%E5%95%8F%E9%A1%8C%E5%89%B2%E6%84%9B-1">（1）問題（割愛）</a></li>
+<li><a href="#2%E8%A7%A3%E8%AA%AC">（2）解説</a></li>
+</ul>
+</li>
+<li><a href="#%E6%88%90%E7%B8%BE%E5%88%86%E5%B8%83">成績分布</a></li>
+</ul>
+<h2 id="%E5%95%8F%E9%A1%8C">問題</h2>
+<p>次の2問のうち1問を選択して、答えなさい。</p>
+<p>【問題1】〔三阪〕</p>
+<p>以下の問い1～3すべてに答えなさい。</p>
+<ol>
+<li>日本は明治維新後、西欧近代型の法体系を継受したが、その時々の社会・政治状況のなかで、できあがった法制度は日本的な特徴と帯びることとされる。こうした西欧近代型法体系の継受の過程について、そこに見られる日本的な特徴が明らかにしつつ、説明しなさい。</li>
+<li>1で述べた点をふまえ、「日本国憲法」制定の歴史的意義を説明しなさい。</li>
+<li>19世紀末から現代に至るまで、日本においては、訴訟件数に見られるように、裁判所利用が著しく少ないことが指摘される。その理由を、明治維新以後継受された西欧近代型の裁判制度と、日本人の伝統的な法・権利についての考え方とが合致しないからだ、とする有力な説明がある。この議論についてあなたの意見を述べなさい。</li>
+</ol>
+<p>【問題2】〔福井〕</p>
+<p>以下の問い1～4すべてに答えなさい。</p>
+<ol>
+<li>契約の一般的成立要件について説明しなさい。</li>
+<li>「契約自由の原則」の内容を4つ挙げて説明しなさい。</li>
+<li>契約の基本原則は社会の高度化によってどのように変わったか、論じなさい。</li>
+<li>以下の消費者契約に関わる問について、法律要件と条文を挙げて答えなさい。
+<ol>
+<li>一人暮らしなのに、事業者に勧誘されて、布団を大量に買ってしまった。こんなに布団は使わないし、事業者もその事は十分わかっていた。この契約を取り消すことはできるか。</li>
+<li>自分はまだ学生なのだが、事業者から「このままではお肌がボロボロになる。うちのエステが必要」と勧誘されてエステの契約をしてしまった。この契約を取り消すことはできるか。</li>
+<li>事業者からサービスを受ける契約をしたが、契約書に「会員が、成年後見開始の審判を受けたときには、事業者は直ちに会員契約を取り消すことができる。」という条項があった。このような条項は有効なのか。</li>
+</ol>
+</li>
+</ol>
+<h2 id="%E8%AC%9B%E8%A9%95%E5%95%8F%E9%A1%8C1">講評（問題1）</h2>
+<h3 id="1%E5%95%8F%E9%A1%8C%E5%89%B2%E6%84%9B">（1）問題（割愛）</h3>
+<h3 id="2%E5%87%BA%E9%A1%8C%E6%84%8F%E5%9B%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">（2）出題意図について</h3>
+<p>1は、日本近代法の成立過程に見られる特徴を論じることである。講義（第4・5回）では日本近代法が、当時において普遍的なモデルとされた西欧型近代法を継受しつつ、その当時に日本が置かれた歴史的状況のなかで、特徴を帯びることを論じた。理論的には明治憲法が西欧の市民革命の論理とは異なる神話的伝統性に基づく国体論を採ったこと、法律の留保の下での「臣民」の限定的な権利保障でしかなかったこと、国家の仕組みとしては一元主義型議院内閣制を否定したこと、したがって社会の成員の意思による国家権力の抑制の論理が弱かったことなどである。<br>
+　1で問われた、近代日本法の特徴を原理的に否定したのが日本国憲法の成立であり、その意義を1との関係で論じてもらうことが、2の出題意図である。<br>
+　3の出題意図は、対国家との関係で権利保障が実現された日本国憲法の下でも、人びとは実際に法を用いて自らの権利実現を積極的に行い得る社会が実現されたのか、この問題を考えてもらうことである。</p>
+<h4 id="3%E7%AD%94%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E8%AC%9B%E8%A9%95">（3）答案についての講評</h4>
+<p>上述した1～3の連関を踏まえ、具体的な記述がなされていれば、B（70点）以上の評価をしている。評価がCないしはFの答案については、端的に抽象的な文言で説明しているにとどまる答案であった。<br>
+　そうした答案について例を挙げれば、2について「日本国憲法はGHQの指導の下、制定された。そこでは主権在民、基本的人権の尊重、象徴天皇制がとられた。これにより温存されてきた日本の旧体制が解体され、西欧的近代憲法が成立した。」という2行程度の説明に終わっている答案がこれに該当する。ここには「GHQの指導」「西欧的近代憲法」についての具体的な叙述がなく、また「主権在民、基本的人権の尊重、象徴天皇制がとられた」ことが戦前の法のあり方をどう変えたのか、について説明が欠如している。本人にとっては要点をまとめているつもりだろうが、まさにこれらについての具体的な記述がなければ、出題に答えていることにはならない。</p>
+<h2 id="%E8%AC%9B%E8%A9%95%E5%95%8F%E9%A1%8C2">講評（問題2）</h2>
+<h3 id="1%E5%95%8F%E9%A1%8C%E5%89%B2%E6%84%9B">（1）問題（割愛）</h3>
+<h3 id="2%E8%A7%A3%E8%AA%AC">（2）解説</h3>
+<p>本問は、授業で説明した、契約法の基本的な考え方と社会の高度化に伴うその変容について考えてもらうことを目的として出題した。<br>
+　１は申込の意思表示（「意思」だけでは足りない）に対して相手方が承諾したときに成立する（民法522条1項）ことを記し、法令の定めがある場合を除いて方式等を具備することを要しない（諾成主義）について簡単な説明があれば満点。有効要件等について説明していた答案も多かった（これ自体は加点も減点もしていない）が、記述中に間違いが含まれていれば減点対象とした（配点20点）。<br>
+　２ は「契約自由の原則」の説明として、「締結の自由」（521条1項）、「内容の自由」（521条2項）、「方法の自由」（522条2項）、「相手方選択の自由」の内容がきちんと書かれていれば満点とした（配点25点）。<br>
+　３ は、民法が念頭に置いていた当事者間の能力の平等が社会の高度化によって崩壊し、情報量と交渉力の点で圧倒的な「事業者」とそうではない「消費者」との格差があまりにも大きくなり、その格差を利用したり、窮迫に付け込んだりする不適切な取引が行われがちになったことを挙げ、消費者基本法の理念を説明するとともに、さらに当事者間の情報格差や交渉力の格差を埋めるべく、消費者側に取消権や不当条項の無効の主張を認める消費者契約法が導入されたことについて書けていればよいこととした。歴史的経緯の説明なのであまりに短い説明は大きく減点した（配点25点）。説明については配布したPDFのテキスト資料に詳しい。<br>
+　４ は消費者契約法の該当条文を挙げ、事例をその要件に当てはめることを求める小問であった（配点30点、各10点）。（１）は消費者契約法第4条4項がそのまま当てはまる。取消すことができる。（２）は消費者契約法第4条3項3号ロがそのまま当てはまる。取消すことができる。（３）は消費者契約法第8条の3がそのまま当てはまる。当該条項は無効である。<br>
+　小問１～３は教科書等をみればすぐに書ける内容だったので、点差が開いたのは小問４の各問となった。問題文にあえて「消費者契約」と挙げて、消費者契約法を参照するように誘導したのだが、民法の意思表示の瑕疵や特定商取引法の条文を引いてきて「取消しうる」という結論を導いたりしている答案が多かったが、いずれも適用対象が異なっており、正解とすることはできなかった。もっとも、〇か×かで採点すると得点差が大きくなりすぎるので、部分点はかなり拾っていく方法で採点した。</p>
+<h2 id="%E6%88%90%E7%B8%BE%E5%88%86%E5%B8%83">成績分布</h2>
+<ul>
+<li>合格者 226名
+<ul>
+<li>S 8.8％</li>
+<li>A 19.9％</li>
+<li>B 42.5％</li>
+<li>C 28.8％</li>
+</ul>
+</li>
+<li>不合格者47名（未提出者を含む。履修登録者全体の17.2％）</li>
+</ul>
+
+</body>
+</html>

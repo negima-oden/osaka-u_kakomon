@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>law_basis_2020.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E6%B3%95%E5%AD%A6%E3%81%AE%E5%9F%BA%E7%A4%8E-2020%E5%B9%B4%E5%BA%A6%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E8%AA%B2%E9%A1%8C%E5%9D%82%E5%8F%A3%E4%B8%80%E6%88%90%E6%9E%97%E6%99%BA%E8%89%AF%E7%A6%8F%E4%BA%95%E5%BA%B7%E5%A4%AA">法学の基礎　2020年度（レポート課題）（坂口一成，林智良，福井康太）</h1>
+<h2 id="%E8%AC%9B%E8%A9%95%E7%A6%8F%E4%BA%95%E6%8B%85%E5%BD%93%E5%88%86">講評（福井担当分）</h2>
+<h3 id="1%E8%AA%B2%E9%A1%8C">（1）課題</h3>
+<ol>
+<li>問１ 著作権を侵害することはなぜ許されないのでしょうか、授業で扱ったことに基づいて、その理由について簡潔に述べなさい。</li>
+<li>問２ Aさんは、著名なYouTuberであるBさんのチャンネルで、Bさんの動画があまりに面白かったので、この動画を自分の所有するノートパソコンにダウンロードし、面白おかしく加工して、自分の動画としてYouTubeの自分のチャンネルにアップロードしました。Aさんのアップロードした加工動画は視聴数100万回を超え、注目を集めました。サイトのコメント欄に自分の動画を小ばかにしたような書き込みが急増し、チャンネル登録者数が激減したことからBさんがAさんの加工動画を発見し、Aさんの加工動画アップロードによって自分のYouTubeのチャンネル登録者数が激減した結果、500万円の損害が発生したとして、BさんはAさんに対して、Aさんの居住地の地方裁判所に、不法行為による損害賠償請求訴訟を起こしました。BさんのAさんに対するこの損害賠償請求は認められるでしょうか。この請求の法律要件に、与えられた事実を当てはめて、請求が認められるかどうか検討しなさい。なお、損害額が500万円（得られるはずの広告収入が得られなかった）であることについては、YouTube社に確認したかぎり争う余地がないこととします。</li>
+</ol>
+<p>[註記]</p>
+<ul>
+<li>本問においてはAさんの刑事責任は問題とされていません。民法上の不法行為のみ検討して解答してください）。</li>
+<li>YouTubeの動画をダウンロードすることはYouTube規約で禁止されており、これを勝手にダウンロードした場合には違法になります。また、作者の許諾なく動画を加工することは、作者の著作権の侵害となります。</li>
+<li>授業第8回のビデオで紹介した不法行為の成立要件を法的三段論法にしたがって論述してください。要件事実の丁寧な当てはめを期待しています。</li>
+</ul>
+<h3 id="2%E8%A7%A3%E8%AA%AC%E3%81%A8%E8%AC%9B%E8%A9%95">（2）解説と講評</h3>
+<p>問１では、著作権は何のために設けられた制度なのかを簡潔に述べるよう問いました。配布資料を参考にしても、また著作権法第1条にある「目的」を参照して解答しても一応の得点となっています。問１の配点は福井の担当分の20%です。<br>
+　問２では、Ａさんの著作権侵害行為について、不法行為の法律要件（故意・過失、権利・利益侵害、損害、因果関係）を挙げ、これに問題文中の事実を当てはめて、Ｂさんの損害賠償請求権を導き出す事例問題を出しました。問２の註記にて、刑事責任（著作権侵害への刑事罰）は問わないとし、また、権利・利益侵害について深入りしなくてよいように説明をつけ、損害額についても事前に確定しておいたので、実質的には、過失の有無と因果関係について事実関係を当てはめればよいという設定にしました。ＴＦの宇多鼓次朗（Ｄ１）さんによる解説に詳しい内容が書いてあるので、詳細はそちらに譲ります。「著作権侵害」という用語をみて著作権法（第114条「損害額推定」や、第119条以下の「罰則」等）の解釈に飛びついている答案が少なからずありました。著作権法から不法行為による損害賠償請求権は導き出せないので、本来はこれは「不可」なのですが、内容的に少しでも関連のあることが書いてあればぎりぎり合格点としました。頑張って書いたのに点数が低かったという場合のほとんどがこれに該当します。問２の配点は、福井の担当分の80%です。</p>
+<h2 id="%E8%AC%9B%E8%A9%95%E6%9E%97%E6%8B%85%E5%BD%93%E5%88%86">講評（林担当分）</h2>
+<h3 id="1%E8%AA%B2%E9%A1%8C">（1）課題</h3>
+<p>第11回の参考資料として掲示した、いわゆる「踏んだり蹴ったり」判決文と「有責配偶者離婚請求認容事件」の判決文を読み比べて、以下の点につき論じなさい。<br>
+（１） 両判決の間にある、考え方の相違<br>
+（２） 愛情関係に法的な枠組みを与えることの意義と問題点<br>
+※上記第２点で挙げた「愛情関係」という用語について、本出題ではさしあたり日本の現行法制が前提とする異性間のものを想定するが、同性間のそれについて論評が及ぶことも、そもそも愛情関係の存在自体に疑義を差し挟むことも何ら差し支えない。<br>
+分量は1000字以上で、2500-3000字程度を想定するが､概ね5000字は越えないように。</p>
+<h3 id="2%E8%A7%A3%E8%AA%AC">（2）解説</h3>
+<p>私の課題は2問からなります。第１問は、講義の際にあつかった両判決をもとに、消極的破綻主義から積極的破綻主義への変遷が理解できているかを問うものでした。第２問は若干トリッキーな出題に受け取られたかも知れません。出題者としては、従来の婚姻制度が異性間の結びつきと親密圏の形成、次世代の子の育成、さらに財産･権利義務の承継を前提に形成されてきたものの、それが現在岐路に立っており、設題のような表現が自明のものとして使えるか、また、そもそも個人のプライバシーと感情にどこまで法が立ち入ることが出来るかを自由に考えてもらいたい、という意図で出題しました。</p>
+<h3 id="3%E6%8E%A1%E7%82%B9%E5%9F%BA%E6%BA%96">（3）採点基準</h3>
+<p>第1問につきましては、まず両判決が問題にしている論点を、有責配偶者からの裁判離婚請求、消極的破綻主義から積極的破綻主義への変遷、抽象的離婚原因などの基本的概念を用いて説明できている確認しました。さらに、体系書や判例評釈に頼った記述なのか、判決文そのものも直接読解しようとしたかの違いも評価基準にしており、例えば、個別意見を具体的に検討したかなどもその手がかりとしました。第２問につきましては、(抽象的になりますが、)解答者自身の考えを、各種の資料を自分の議論に組み込みつつ説得的に展開しようとしたかを評価基準としました。例えば、自分の周囲の親族を観察したり同性婚の実現に関わるサイトや資料を渉猟したりその他様々な論拠を用いて、議論を進められたかを見ました。その点で、徹頭徹尾自らの思弁を展開したり、反対に何かの資料をひたすら引用したり、という答案には高い評価を与えることは出来ませんでした。</p>
+<h3 id="4%E8%AC%9B%E8%A9%95">（4）講評</h3>
+<p>両問とも期待以上という答案も数通発見しましたが、多くは、いずれかの答案に力が入ったものでした。第1問では、個別意見を詳しく検討したり、両判決の時代的懸隔とその間に行われた公的給付制度の整備や女性の経済的自立他の社会的背景に言及したりした答案。第2問では、(例えば)同性婚をめぐる国際的比較をデータに基づき展開した答案等々。このようにいずれかの問いひとつに対して力を注いだものでも、着眼のすぐれた答案、努力の認められる答案には相応の評価を与えました。</p>
+<h2 id="%E8%AC%9B%E8%A9%95%E5%9D%82%E5%8F%A3%E6%8B%85%E5%BD%93%E5%88%86">講評（坂口担当分）</h2>
+<h3 id="1%E8%AA%B2%E9%A1%8C">（1）課題</h3>
+<p>第13回では刑法の罪刑法定主義を学んだ。その観点から、「刑法関連の課題」（7月5日締切り。以下「前課題」と呼ぶ）に対して自身が提出した内容を、1000字以内で論評しなさい。なお、前課題を提出していない者は、下記の例文のいずれか（省略）を用いること。また、字数は論評部分のそれである。必要なことが書いてあれば、少なくともよい。<br>
+【参考資料・前課題】<br>
+　以下に説明するのは「大津事件」と呼ばれる事件である。この事件への対応をめぐっては、政府（行政）と裁判所（司法）との間で立場が分かれた。事件の概要、参考条文および判決を読んで、どちらの立場を採るべきか、およびその理由を400字以内で述べよ。なお、その理由づけが法学的である必要はない。<br>
+　なお、本課題は成績評価の対象となる課題の一部である。これを前提に、最終課題を出す。したがって、未提出の場合は前提を欠くことになるため、大幅に減点する。もっとも、本課題の内容（立場・理由づけ）の良し悪しは、真摯なものでありさえすれば、成績評価に影響しない。</p>
+<h3 id="2%E8%A7%A3%E8%AA%AC">（2）解説</h3>
+<p>「前課題」の理由づけとして、政治的・外交的考慮や司法権の独立が挙げられることが多いことを推測し、本課題を作成した。本課題ではそうした推測を前提に、罪刑法定主義に基づき自らの過去の考え方を見直すことにより、罪刑法定主義の理解を深め、さらには1 つの結論には様々な理由づけがありうることを理解するという効果を期待した。なお、「前課題」において（少数ながらも）罪刑法定主義を理由としていた者もいた。その者たちについても、同様の効果を期待した（罪刑法定主義のより正確な、深い理解）。</p>
+<h3 id="3%E6%8E%A1%E7%82%B9%E5%9F%BA%E6%BA%96">（3）採点基準</h3>
+<p>求めているのは、罪刑法定主義の観点から、自己の「前課題」の内容を論評することである。前者については、立脚する観点である罪刑法定主義の説明、どの点でどの派生原則違反が問題となるのか、が主なポイントとなる。後者は、その観点に基づき、客観的・相対的に自己の内容を論評できるかがポイントとなる（反省して欲しかったわけではない）。</p>
+<h3 id="4%E8%AC%9B%E8%A9%95">（4）講評</h3>
+<p>個別には優れたものももちろんあったが、全体的傾向として、丁寧さが欠けていた。罪刑法定主義とは何かを説明しない、あるいは単に罪刑法定主義に違反する、といったような論述が散見されたが、雑である。また、課題に対応していないものもあった。</p>
+<h2 id="%E6%88%90%E7%B8%BE%E5%88%86%E5%B8%83">成績分布</h2>
+<ul>
+<li>合格者 276名
+<ul>
+<li>S 10.5％</li>
+<li>A 15.9％</li>
+<li>B 47.8％</li>
+<li>C 25.7％</li>
+</ul>
+</li>
+<li>不合格者15名（5.2％）</li>
+</ul>
+
+</body>
+</html>
